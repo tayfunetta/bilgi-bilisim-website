@@ -67,7 +67,7 @@ export default function Home() {
         }
       }
 
-      if(window.scrollY >= 100) animationFunction()
+      if (window.scrollY >= 100) animationFunction()
     })
   }, [])
 
@@ -100,7 +100,7 @@ export default function Home() {
     <Layout>
       <div className='fixed w-full h-5/6 bg-rose-500 pt-48 text-center'>
         <h1 id='title' className={`${textSizeSetter()} font-bold text-gray-100`}>Bilgi Bilişim Bilgisayar</h1>
-        <h3 id='title-explanation' className={`${explanationSizeSetter()} text-3xl text-gray-200 mt-5`}>-Kaliteli ve güvenilir hizmet-</h3>
+        <h3 id='title-explanation' className={`${explanationSizeSetter()} text-3xl opacity-40 mt-5`}>-Kaliteli ve güvenilir hizmet-</h3>
       </div>
 
       <main className="shadow absolute top-[60%] bg-gray-200 py-32 rounded-3xl z-10">
@@ -137,8 +137,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <p>Bilgi bilişim bilgisayar olarak, 24 yıllık deneyimimizle ve uzman kadromuzla birçok konuda sizlere hizmet vermekteyiz</p>
+        <section id='choose'>
+          <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
+            <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
+            <p className='text-xl leading-8 text-red-100'><span className='text-white text-2xl font-semibold'>Bilgi Bilişim Bilgisayar</span> olarak 24 yıllık deneyimimizle ağ ve güvenlik sistemleri, bilgisayar donanımı ve elektrik altyapı çözümleri konularında müşterilerimize en iyi hizmeti sunmaktayız. Uzman kadromuz ve son teknoloji ürünleri ile işletmenizin bilişim ve elektrik altyapısı ihtiyaçlarına etkin çözümler üretiyoruz. Kurumsal firma ve kamu kurumlarının güvenilir teknoloji ve elektrik altyapısı ortağı olma vizyonumuzla faaliyetlerimizi sürdürüyor, müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz. Uzun yıllara dayanan bilgi birikimi ve deneyimimizle bilişim ve elektrik altyapısı konularında siz değerli müşterilerimize en iyi hizmeti sunmaya devam edeceğiz.</p>
+          </div>
         </section>
       </main>
     </Layout>
