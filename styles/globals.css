@@ -30,7 +30,7 @@
 }
 
 .service-card-text {
-  @apply  flex justify-evenly items-center text-center text-2xl text-red-600 mb-5;
+  @apply flex justify-evenly items-center text-center text-2xl text-red-600 mb-5;
 }
 
 .service-card svg {

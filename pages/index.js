@@ -66,6 +66,8 @@ export default function Home() {
           titleExp.classList.remove('text-base')
         }
       }
+
+      if(window.scrollY >= 100) animationFunction()
     })
   }, [])
 
@@ -83,6 +85,17 @@ export default function Home() {
     else return 'text-lg'
   }
 
+  const animationFunction = () => {
+    const serviceCards = document.querySelectorAll('.service-card')
+
+    serviceCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.remove('opacity-0')
+        card.classList.add('opacity-100')
+      }, 200 * index)
+    })
+  }
+
   return (
     <Layout>
       <div className='fixed w-full h-5/6 bg-rose-500 pt-48 text-center'>
@@ -94,34 +107,38 @@ export default function Home() {
         <section id='services'>
           <h2 className='text-center text-4xl font-semibold text-red-600 underline underline-offset-4'>Hizmetlerimiz</h2>
           <div className='flex justify-evenly items-center flex-wrap bg-red-200 w-11/12 mx-auto mt-12 py-10 rounded-3xl'>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'><PiDesktopTowerBold /><span>Donanım Satışı</span></div>
               <Image src="/images/img1.png" className='mx-auto' height="300" width="300" alt='server image' />
             </div>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'><BiServer /><span>Network Çözümleri</span></div>
               <Image src="/images/img2.jpg" className='mx-auto' height="300" width="300" alt='switch image' />
             </div>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'>
                 <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
                 <GrHostMaintenance /><span>Bakım Anlaşmaları</span>
               </div>
               <Image src="/images/img3.png" className='mx-auto' height={200} width={200} alt='shaking hands image' />
             </div>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'><AiOutlineInfoCircle /><span>Danışmanlık Hizmetleri</span></div>
               <Image src="/images/img4.jpeg" className='mx-auto' height={300} width={300} alt='consultancy image' />
             </div>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'><SlWrench /><span>Teknik Servis</span></div>
               <Image src="/images/img5.png" className='mx-auto' height={300} width={300} alt='wrench and screwdriver image' />
             </div>
-            <div className='service-card'>
+            <div className='service-card opacity-0'>
               <div className='service-card-text'><BiCctv /><span>Güvenlik Sistemleri</span></div>
               <Image src="/images/img6.png" className='mx-auto' height={300} width={300} alt='cctv image' />
             </div>
           </div>
+        </section>
+
+        <section>
+          <p>Bilgi bilişim bilgisayar olarak, 24 yıllık deneyimimizle ve uzman kadromuzla birçok konuda sizlere hizmet vermekteyiz</p>
         </section>
       </main>
     </Layout>
