@@ -13,14 +13,12 @@ function Layout({ children }) {
             </div>
             <div className='flex justify-between py-3 lg:space-x-10 space-x-3'>
               <Link href='/' className='hover:text-red-200'>Ana sayfa</Link>
-              <Link href='/about' className='hover:text-red-200'>Hakkımızda</Link>
-              <Link href='/projects' className='hover:text-red-200'>Projelerimiz</Link>
-              <Link href='/contact' className='hover:text-red-200'>İletişim</Link>
+              <Link href='/iletisim' className='hover:text-red-200'>İletişim</Link>
             </div>
           </nav>
         </div>
       </header>
-
+      <div className='md:h-[4.2rem] h-[7.2rem] bg-blue-600'></div>
       {children}
     </div>
   )

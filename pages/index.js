@@ -13,57 +13,59 @@ export default function Home() {
   useEffect(() => {
     setWindowWidth(window.innerWidth)
 
-    window.addEventListener('scroll', () => {
+    document.addEventListener('scroll', () => {
       const title = document.getElementById('title')
       const titleExp = document.getElementById('title-explanation')
 
-      if (window.innerWidth >= 1000) {
-        if (window.scrollY >= 40) {
-          title.classList.add('text-6xl')
-          title.classList.remove('text-7xl')
-          titleExp.classList.add('text-2xl')
-          titleExp.classList.remove('text-3xl')
+      if (title) {
+        if (window.innerWidth >= 1000) {
+          if (window.scrollY >= 40) {
+            title.classList.add('text-6xl')
+            title.classList.remove('text-7xl')
+            titleExp.classList.add('text-2xl')
+            titleExp.classList.remove('text-3xl')
+          } else {
+            title.classList.add('text-7xl')
+            title.classList.remove('text-6xl')
+            titleExp.classList.add('text-3xl')
+            titleExp.classList.remove('text-2xl')
+          }
+        } else if (window.innerWidth >= 700) {
+          if (window.scrollY >= 40) {
+            title.classList.add('text-5xl')
+            title.classList.remove('text-6xl')
+            titleExp.classList.add('text-xl')
+            titleExp.classList.remove('text-2xl')
+          } else {
+            title.classList.add('text-6xl')
+            title.classList.remove('text-5xl')
+            titleExp.classList.add('text-2xl')
+            titleExp.classList.remove('text-xl')
+          }
+        } else if (window.innerWidth >= 500) {
+          if (window.scrollY >= 40) {
+            title.classList.add('text-3xl')
+            title.classList.remove('text-4xl')
+            titleExp.classList.add('text-lg')
+            titleExp.classList.remove('text-xl')
+          } else {
+            title.classList.add('text-4xl')
+            title.classList.remove('text-3xl')
+            titleExp.classList.add('text-xl')
+            titleExp.classList.remove('text-lg')
+          }
         } else {
-          title.classList.add('text-7xl')
-          title.classList.remove('text-6xl')
-          titleExp.classList.add('text-3xl')
-          titleExp.classList.remove('text-2xl')
-        }
-      } else if (window.innerWidth >= 700) {
-        if (window.scrollY >= 40) {
-          title.classList.add('text-5xl')
-          title.classList.remove('text-6xl')
-          titleExp.classList.add('text-xl')
-          titleExp.classList.remove('text-2xl')
-        } else {
-          title.classList.add('text-6xl')
-          title.classList.remove('text-5xl')
-          titleExp.classList.add('text-2xl')
-          titleExp.classList.remove('text-xl')
-        }
-      } else if (window.innerWidth >= 500) {
-        if (window.scrollY >= 40) {
-          title.classList.add('text-3xl')
-          title.classList.remove('text-4xl')
-          titleExp.classList.add('text-lg')
-          titleExp.classList.remove('text-xl')
-        } else {
-          title.classList.add('text-4xl')
-          title.classList.remove('text-3xl')
-          titleExp.classList.add('text-xl')
-          titleExp.classList.remove('text-lg')
-        }
-      } else {
-        if (window.scrollY >= 40) {
-          title.classList.add('text-2xl')
-          title.classList.remove('text-3xl')
-          titleExp.classList.add('text-base')
-          titleExp.classList.remove('text-lg')
-        } else {
-          title.classList.add('text-3xl')
-          title.classList.remove('text-2xl')
-          titleExp.classList.add('text-lg')
-          titleExp.classList.remove('text-base')
+          if (window.scrollY >= 40) {
+            title.classList.add('text-2xl')
+            title.classList.remove('text-3xl')
+            titleExp.classList.add('text-base')
+            titleExp.classList.remove('text-lg')
+          } else {
+            title.classList.add('text-3xl')
+            title.classList.remove('text-2xl')
+            titleExp.classList.add('text-lg')
+            titleExp.classList.remove('text-base')
+          }
         }
       }
 
@@ -98,7 +100,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className='fixed w-full h-5/6 bg-rose-500 pt-48 text-center'>
+      <div className='fixed w-full h-5/6 bg-rose-500 pt-32 text-center'>
         <h1 id='title' className={`${textSizeSetter()} font-bold text-gray-100`}>Bilgi Bilişim Bilgisayar</h1>
         <h3 id='title-explanation' className={`${explanationSizeSetter()} text-3xl opacity-40 mt-5`}>-Kaliteli ve güvenilir hizmet-</h3>
       </div>
@@ -113,7 +115,7 @@ export default function Home() {
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><BiServer /><span>Network Çözümleri</span></div>
-              <Image src="/images/img2.jpg" className='mx-auto' height="300" width="300" alt='switch image' />
+              <Image src="/images/img2.jpg" className='mx-auto rounded-3xl' height="300" width="300" alt='switch image' />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'>
@@ -124,7 +126,7 @@ export default function Home() {
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><AiOutlineInfoCircle /><span>Danışmanlık Hizmetleri</span></div>
-              <Image src="/images/img4.jpeg" className='mx-auto' height={300} width={300} alt='consultancy image' />
+              <Image src="/images/img4.jpeg" className='mx-auto rounded-3xl' height={300} width={300} alt='consultancy image' />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><SlWrench /><span>Teknik Servis</span></div>

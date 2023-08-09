@@ -12,13 +12,18 @@
 }
 
 #title-explanation {
-  animation: title-animation 0.5s ease-out;
+  animation: title-exp-animation 0.5s ease-out;
   transition: all 0.1s linear;
 }
 
 @keyframes title-animation {
   from {@apply opacity-0}
   to {@apply opacity-100}
+}
+
+@keyframes title-exp-animation {
+  from {@apply opacity-0}
+  to {@apply opacity-40}
 }
 
 .shadow {
