@@ -1,10 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 
 
 function Layout({ children }) {
   return (
     <div className='w-full min-h-screen'>
+      <Head>
+        <title>Bilgi Bilişim Bilgisayar</title>
+        <meta name="description" content="Bilgi Bilişim Bilgisayar" />
+        <meta charSet='UTF-8' />
+        <meta name='keywords' content='Bilgi Bilişim Bilgisayar, elektronik, donanım, kamera sistemleri, teknik servis' />
+      </Head>
+      
       <header>
         <div className='fixed w-full z-20 text-white border-b-4 border-red-600' role='navigation'>
           <nav className='md:flex justify-between items-center mx-auto lg:px-20 md:px-10 px-5 bg-gray-600'>
