@@ -11,7 +11,7 @@ function Layout({ children }) {
             <div className='flex justify-between space-x-3 py-4'>
               <Link href='/' className='mx-auto'><span className="text-2xl hover:text-red-300">Bilgi Bilişim Bilgisayar</span></Link>
             </div>
-            <div className='flex justify-between py-3 lg:space-x-10 space-x-3'>
+            <div className='flex md:justify-between justify-end py-3 lg:space-x-10 space-x-3'>
               <Link href='/' className='hover:text-red-200'>Ana sayfa</Link>
               <Link href='/iletisim' className='hover:text-red-200'>İletişim</Link>
             </div>

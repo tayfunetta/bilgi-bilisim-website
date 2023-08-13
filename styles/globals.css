@@ -7,12 +7,12 @@
 }
 
 #title {
-  animation: title-animation 0.5s ease-out;
+  animation: title-animation 1s ease-out;
   transition: all 0.1s linear;
 }
 
 #title-explanation {
-  animation: title-exp-animation 0.5s ease-out;
+  animation: title-exp-animation 1s ease-out;
   transition: all 0.1s linear;
 }
 

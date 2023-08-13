@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
-import Image from 'next/image';
+import Image from 'next/image'
 import Layout from '../components/Layout'
 import { PiDesktopTowerBold } from 'react-icons/pi';
 import { BiServer, BiCctv } from 'react-icons/bi';
 import { GrHostMaintenance } from 'react-icons/gr';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { SlWrench } from 'react-icons/sl';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFlip } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-flip';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -102,7 +107,7 @@ export default function Home() {
     <Layout>
       <div className='fixed w-full h-5/6 bg-rose-500 pt-32 text-center'>
         <h1 id='title' className={`${textSizeSetter()} font-bold text-gray-100`}>Bilgi Bilişim Bilgisayar</h1>
-        <h3 id='title-explanation' className={`${explanationSizeSetter()} text-3xl opacity-40 mt-5`}>-Kaliteli ve güvenilir hizmet-</h3>
+        <h3 id='title-explanation' className={`${explanationSizeSetter()} text-3xl mt-5 opacity-40`}>-Kaliteli ve güvenilir hizmet-</h3>
       </div>
 
       <main className="shadow absolute top-[60%] bg-gray-200 py-32 rounded-3xl z-10">
@@ -111,34 +116,33 @@ export default function Home() {
           <div className='flex justify-evenly items-center flex-wrap bg-red-200 w-11/12 mx-auto mt-12 py-10 rounded-3xl'>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><PiDesktopTowerBold /><span>Donanım Satışı</span></div>
-              <Image src="/images/img1.png" className='mx-auto' height="300" width="300" alt='server image' />
+              <Swipe imgs={['img1.png', 'img2.jpg', 'img3.png']} classes={['', 'rounded-3xl', '']} alts={['server', 'computer case', 'printer']} dim3={[200, 200]} delay={3000} />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><BiServer /><span>Network Çözümleri</span></div>
-              <Image src="/images/img2.jpg" className='mx-auto rounded-3xl' height="300" width="300" alt='switch image' />
+              <Swipe imgs={['img4.jpg', 'img5.png', 'img6.png']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['switch', 'switch', 'industrial switch']} dim3={[200, 200]} delay={2500} />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'>
                 <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
                 <GrHostMaintenance /><span>Bakım Anlaşmaları</span>
               </div>
-              <Image src="/images/img3.png" className='mx-auto' height={200} width={200} alt='shaking hands image' />
+              <Swipe imgs={['img7.jpg', 'img8.png', 'img9.jpg']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['shaking hands', 'shaking hands', 'shaking hands']} dim2={[200, 200]} delay={3500} />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><AiOutlineInfoCircle /><span>Danışmanlık Hizmetleri</span></div>
-              <Image src="/images/img4.jpeg" className='mx-auto rounded-3xl' height={300} width={300} alt='consultancy image' />
+              <Swipe imgs={['img10.png', 'img11.jpeg', 'img12.jpg']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['talking people', 'talking people', 'talking people']} dim1={[220, 220]} delay={3500} />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><SlWrench /><span>Teknik Servis</span></div>
-              <Image src="/images/img5.png" className='mx-auto' height={300} width={300} alt='wrench and screwdriver image' />
+              <Swipe imgs={['img13.jpg', 'img14.jpg', 'img15.png']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['technician', 'technician', 'wrench and screwdriver']} delay={4000} />
             </div>
             <div className='service-card opacity-0'>
               <div className='service-card-text'><BiCctv /><span>Güvenlik Sistemleri</span></div>
-              <Image src="/images/img6.png" className='mx-auto' height={300} width={300} alt='cctv image' />
+              <Swipe imgs={['img16.png', 'img17.png', 'img18.png']} classes={['', '', '']} dim2={[200, 200]} alts={['bullet camera', 'eyeball camera', 'bullet camera']} delay={2500} />
             </div>
           </div>
         </section>
-
         <section id='choose'>
           <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
             <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
@@ -147,5 +151,20 @@ export default function Home() {
         </section>
       </main>
     </Layout>
+  )
+}
+export function Swipe({ imgs, classes, alts, dim1 = [300, 300], dim2 = [300, 300], dim3 = [300, 300], delay }) {
+  return (
+    <Swiper effect={'flip'} slidesPerView={1} loop={true} modules={[Autoplay, EffectFlip]} autoplay={{ delay: delay }}>
+      <SwiperSlide>
+        <Image src={`/images/${imgs[0]}`} className={`mx-auto ${classes[0]}`} width={dim1[0]} height={dim1[1]} alt={`${alts[0]} image`} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src={`/images/${imgs[1]}`} className={`mx-auto ${classes[1]}`} width={dim2[0]} height={dim2[1]} alt={`${alts[1]} image`} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src={`/images/${imgs[2]}`} className={`mx-auto ${classes[2]}`} width={dim3[0]} height={dim3[1]} alt={`${alts[2]} image`} />
+      </SwiperSlide>
+    </Swiper>
   )
 }
