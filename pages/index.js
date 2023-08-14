@@ -114,33 +114,33 @@ export default function Home() {
         <section id='services'>
           <h2 className='text-center text-4xl font-semibold text-red-600 underline underline-offset-4'>Hizmetlerimiz</h2>
           <div className='flex justify-evenly items-center flex-wrap bg-red-200 w-11/12 mx-auto mt-12 py-10 rounded-3xl'>
-            <div className='service-card opacity-0'>
-              <div className='service-card-text'><PiDesktopTowerBold /><span>Donanım Satışı</span></div>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><PiDesktopTowerBold /><figcaption>Donanım Satışı</figcaption></div>
               <Swipe imgs={['img1.png', 'img2.jpg', 'img3.png']} classes={['', 'rounded-3xl', '']} alts={['server', 'computer case', 'printer']} dim3={[200, 200]} delay={3000} />
-            </div>
-            <div className='service-card opacity-0'>
-              <div className='service-card-text'><BiServer /><span>Network Çözümleri</span></div>
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><BiServer /><figcaption>Network Çözümleri</figcaption></div>
               <Swipe imgs={['img4.jpg', 'img5.png', 'img6.png']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['switch', 'switch', 'industrial switch']} dim3={[200, 200]} delay={2500} />
-            </div>
-            <div className='service-card opacity-0'>
+            </figure>
+            <figure className='service-card opacity-0'>
               <div className='service-card-text'>
                 <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
-                <GrHostMaintenance /><span>Bakım Anlaşmaları</span>
+                <GrHostMaintenance /><figcaption>Bakım Anlaşmaları</figcaption>
               </div>
               <Swipe imgs={['img7.jpg', 'img8.png', 'img9.jpg']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['shaking hands', 'shaking hands', 'shaking hands']} dim2={[200, 200]} delay={3500} />
-            </div>
-            <div className='service-card opacity-0'>
-              <div className='service-card-text'><AiOutlineInfoCircle /><span>Danışmanlık Hizmetleri</span></div>
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><AiOutlineInfoCircle /><figcaption>Danışmanlık Hizmetleri</figcaption></div>
               <Swipe imgs={['img10.png', 'img11.jpeg', 'img12.jpg']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['talking people', 'talking people', 'talking people']} dim1={[220, 220]} delay={3500} />
-            </div>
-            <div className='service-card opacity-0'>
-              <div className='service-card-text'><SlWrench /><span>Teknik Servis</span></div>
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><SlWrench /><figcaption>Teknik Servis</figcaption></div>
               <Swipe imgs={['img13.jpg', 'img14.jpg', 'img15.png']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['technician', 'technician', 'wrench and screwdriver']} delay={4000} />
-            </div>
-            <div className='service-card opacity-0'>
-              <div className='service-card-text'><BiCctv /><span>Güvenlik Sistemleri</span></div>
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><BiCctv /><figcaption>Güvenlik Sistemleri</figcaption></div>
               <Swipe imgs={['img16.png', 'img17.png', 'img18.png']} classes={['', '', '']} dim2={[200, 200]} alts={['bullet camera', 'eyeball camera', 'bullet camera']} delay={2500} />
-            </div>
+            </figure>
           </div>
         </section>
         <section id='choose'>
