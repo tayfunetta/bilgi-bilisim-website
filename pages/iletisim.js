@@ -19,8 +19,10 @@ function iletisim() {
                         <p className='text-gray-200 text-xl'>Aydınlı mah. Zeki sk. no:1/A <br />Tuzla/İstanbul</p>
 
                         <div className='inline-block border-b border-thin mt-10'><h3 className='text-3xl text-gray-200'>İletişim bilgileri</h3></div>
-                        <p className='text-gray-200 text-xl'>Telefon numarası: 0555 555 55 55</p>
-                        <p className='text-gray-200 text-xl'>E-posta: bilgibilisim@gmail.com</p>
+                        <p className='text-gray-200 text-xl'><span className='font-bold'>Telefon numarası:</span> 0216 37 999 37</p>
+                        <p className='text-gray-200 text-xl'><span className='font-bold'>E-posta:</span> <br /> bilgibilisim@bilgibilisim.com.tr</p>
+                        <p className='text-gray-200 text-xl'>satis@bilgibilisim.com.tr</p>
+                        <p className='text-gray-200 text-xl'>teknik@bilgibilisim.com.tr</p>
                     </div>
                 </div>
             </div>

@@ -139,14 +139,36 @@ export default function Home() {
             </figure>
             <figure className='service-card opacity-0'>
               <div className='service-card-text'><BiCctv /><figcaption>Güvenlik Sistemleri</figcaption></div>
-              <Swipe imgs={['img16.png', 'img17.png', 'img18.png']} classes={['', '', '']} dim2={[200, 200]} alts={['bullet camera', 'eyeball camera', 'bullet camera']} delay={2500} />
+              <Swiper effect={'flip'} slidesPerView={1} loop={true} modules={[Autoplay, EffectFlip]} autoplay={{ delay: 2000 }}>
+                <SwiperSlide>
+                  <Image src={`/images/img16.png`} className={`mx-auto`} width={300} height={300} alt={`bullet kamera resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img17.png`} className={`mx-auto`} width={200} height={200} alt={`eyeball kamera resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img18.png`} className={`mx-auto`} width={300} height={300} alt={`bullet kamera resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img19.png`} className={`mx-auto`} width={220} height={220} alt={`spitdome kamera resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img20.png`} className={`mx-auto relative bottom-10`} width={300} height={300} alt={`kayıt cihazı resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img21.png`} className={`mx-auto`} width={200} height={200} alt={`wisetech alarm sistemi resmi`} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image src={`/images/img22.png`} className={`mx-auto`} width={200} height={200} alt={`paradox güvenlik sistemi resmi`} />
+                </SwiperSlide>
+              </Swiper>
             </figure>
           </div>
         </section>
         <section id='choose'>
           <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
             <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
-            <p className='text-xl leading-8 text-red-100'><span className='text-white text-2xl font-semibold'>Bilgi Bilişim Bilgisayar</span> olarak 24 yıllık deneyimimizle ağ ve güvenlik sistemleri, bilgisayar donanımı ve elektrik altyapı çözümleri konularında müşterilerimize en iyi hizmeti sunmaktayız. Uzman kadromuz ve son teknoloji ürünleri ile işletmenizin bilişim ve elektrik altyapısı ihtiyaçlarına etkin çözümler üretiyoruz. Kurumsal firma ve kamu kurumlarının güvenilir teknoloji ve elektrik altyapısı ortağı olma vizyonumuzla faaliyetlerimizi sürdürüyor, müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz. Uzun yıllara dayanan bilgi birikimi ve deneyimimizle bilişim ve elektrik altyapısı konularında siz değerli müşterilerimize en iyi hizmeti sunmaya devam edeceğiz.</p>
+            <p className='text-xl leading-8 text-red-100'><span className='text-white text-2xl font-semibold'>Bilgi Bilişim Bilgisayar</span> olarak 24 yıllık deneyimimizle ağ ve güvenlik sistemleri, bilgisayar donanımı ve elektrik altyapı çözümleri konularında müşterilerimize en iyi hizmeti sunmaktayız. Uzman kadromuz ve son teknoloji ürünleri ile işletmenizin bilişim, güvenlik sistemleri ve elektrik altyapısı ihtiyaçlarına etkin çözümler üretiyoruz. Kurumsal firma ve kamu kurumlarının güvenilir teknoloji ve elektrik altyapısı ortağı olma vizyonumuzla faaliyetlerimizi sürdürüyor, müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz. Uzun yıllara dayanan bilgi birikimi ve deneyimimizle bilişim, güvenlik sistemleri ve elektrik altyapısı konularında siz değerli müşterilerimize en iyi hizmeti sunmaya devam edeceğiz.</p>
           </div>
         </section>
       </main>
