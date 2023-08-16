@@ -17,7 +17,7 @@ function Layout({ children }) {
         <div className='fixed w-full z-20 text-white border-b-4 border-red-600' role='navigation'>
           <nav className='md:flex justify-between items-center mx-auto lg:px-20 md:px-10 px-5 bg-gray-600'>
             <div className='flex justify-between space-x-3 py-4'>
-              <Link href='/' className='mx-auto'><span className="text-2xl hover:text-red-300">Bilgi Bilişim Bilgisayar</span></Link>
+              <Link href='/' className='mx-auto'><span className="text-4xl font-bold font-serif hover:text-red-300 italic">B<span className='text-red-500'>B</span>B</span></Link>
             </div>
             <div className='flex md:justify-between justify-end py-3 lg:space-x-10 space-x-3'>
               <Link href='/' className='hover:text-red-200'>Ana sayfa</Link>

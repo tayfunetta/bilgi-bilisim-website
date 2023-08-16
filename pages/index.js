@@ -13,6 +13,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-flip';
 
 export default function Home() {
+  const franchises = ['hp', 'siemens', 'ABB', 'Sew-eurodrive', 'schneider', 'sick', 'pilz', 'allen-bradley', 'dahua', 'inform', 'dell', 'lenovo', 'nexans', 'legrand', 'omron', 'digitus', 'wisetech', 'paradox', 'honeywell', 'apc', 'hcs']
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -73,7 +74,6 @@ export default function Home() {
           }
         }
       }
-
       if (window.scrollY >= 100) animationFunction()
     })
   }, [])
@@ -119,25 +119,6 @@ export default function Home() {
               <Swipe imgs={['img1.png', 'img2.jpg', 'img3.png']} classes={['', 'rounded-3xl', '']} alts={['server', 'computer case', 'printer']} dim3={[200, 200]} delay={3000} />
             </figure>
             <figure className='service-card opacity-0'>
-              <div className='service-card-text'><BiServer /><figcaption>Network Çözümleri</figcaption></div>
-              <Swipe imgs={['img4.jpg', 'img5.png', 'img6.png']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['switch', 'switch', 'industrial switch']} dim3={[200, 200]} delay={2500} />
-            </figure>
-            <figure className='service-card opacity-0'>
-              <div className='service-card-text'>
-                <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
-                <GrHostMaintenance /><figcaption>Bakım Anlaşmaları</figcaption>
-              </div>
-              <Swipe imgs={['img7.jpg', 'img8.png', 'img9.jpg']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['shaking hands', 'shaking hands', 'shaking hands']} dim2={[200, 200]} delay={3500} />
-            </figure>
-            <figure className='service-card opacity-0'>
-              <div className='service-card-text'><AiOutlineInfoCircle /><figcaption>Danışmanlık Hizmetleri</figcaption></div>
-              <Swipe imgs={['img10.png', 'img11.jpeg', 'img12.jpg']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['talking people', 'talking people', 'talking people']} dim1={[220, 220]} delay={3500} />
-            </figure>
-            <figure className='service-card opacity-0'>
-              <div className='service-card-text'><SlWrench /><figcaption>Teknik Servis</figcaption></div>
-              <Swipe imgs={['img13.jpg', 'img14.jpg', 'img15.png']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['technician', 'technician', 'wrench and screwdriver']} delay={4000} />
-            </figure>
-            <figure className='service-card opacity-0'>
               <div className='service-card-text'><BiCctv /><figcaption>Güvenlik Sistemleri</figcaption></div>
               <Swiper effect={'flip'} slidesPerView={1} loop={true} modules={[Autoplay, EffectFlip]} autoplay={{ delay: 2000 }}>
                 <SwiperSlide>
@@ -163,8 +144,43 @@ export default function Home() {
                 </SwiperSlide>
               </Swiper>
             </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><BiServer /><figcaption>Network Çözümleri</figcaption></div>
+              <Swipe imgs={['img4.jpg', 'img5.png', 'img6.png']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['switch', 'switch', 'industrial switch']} dim3={[200, 200]} delay={2500} />
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><SlWrench /><figcaption>Personel Takip Sistemleri</figcaption></div>
+              <Swipe imgs={['img23.webp', 'img24.webp', 'img25.webp']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['zkteco kartlı geçiş sistemi', 'honeywell kartlı geçiş sistemi']} dim3={[200, 200]} delay={2500} />
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'>
+                <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
+                <GrHostMaintenance /><figcaption>Bakım Anlaşmaları</figcaption>
+              </div>
+              <Swipe imgs={['img7.jpg', 'img8.png', 'img9.jpg']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['shaking hands', 'shaking hands', 'shaking hands']} dim2={[200, 200]} delay={3500} />
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><AiOutlineInfoCircle /><figcaption>Danışmanlık Hizmetleri</figcaption></div>
+              <Swipe imgs={['img10.png', 'img11.jpeg', 'img12.jpg']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['talking people', 'talking people', 'talking people']} dim1={[220, 220]} delay={3500} />
+            </figure>
+            <figure className='service-card opacity-0'>
+              <div className='service-card-text'><SlWrench /><figcaption>Teknik Servis</figcaption></div>
+              <Swipe imgs={['img13.jpg', 'img14.jpg', 'img15.png']} classes={['rounded-3xl', 'rounded-3xl', 'rounded-3xl']} alts={['technician', 'technician', 'wrench and screwdriver']} delay={4000} />
+            </figure>
           </div>
         </section>
+
+        <section id='franchises'>
+          <div className='w-10/12 mx-auto px-10 py-10 mt-10 bg-gray-100 border-red-400 border-4 rounded-3xl'>
+            <h2 className='mb-5 text-center text-3xl font-semibold text-red-600'>Bayiliklerimiz</h2>
+            <div className='flex flex-wrap justify-center'>
+              {franchises.map((franchise, index) =>
+                <img className="fran-item" src={`/logos/logo${index + 1}.png`} alt={`${franchise} logo`} key={crypto.randomUUID()} />
+              )}
+            </div>
+          </div>
+        </section>
+
         <section id='choose'>
           <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
             <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
@@ -172,7 +188,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </Layout>
+    </Layout >
   )
 }
 export function Swipe({ imgs, classes, alts, dim1 = [300, 300], dim2 = [300, 300], dim3 = [300, 300], delay }) {
