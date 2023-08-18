@@ -39,7 +39,7 @@
 }
 
 .service-card svg {
-  @apply text-red-700 w-10 h-10;
+  @apply text-red-400 w-10 h-10;
 }
 
 .fran-item{

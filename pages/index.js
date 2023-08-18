@@ -113,7 +113,7 @@ export default function Home() {
       <main className="shadow absolute top-[60%] bg-gray-200 py-32 rounded-3xl z-10">
         <section id='services'>
           <h2 className='text-center text-4xl font-semibold text-red-600 underline underline-offset-4'>Hizmetlerimiz</h2>
-          <div className='flex justify-evenly items-center flex-wrap bg-red-200 w-11/12 mx-auto mt-12 py-10 rounded-3xl'>
+          <div className='flex justify-evenly items-center flex-wrap bg-gray-100 w-11/12 mx-auto mt-12 py-10 rounded-3xl'>
             <figure className='service-card opacity-0'>
               <div className='service-card-text'><PiDesktopTowerBold /><figcaption>Donanım Satışı</figcaption></div>
               <Swipe imgs={['img1.png', 'img2.jpg', 'img3.png']} classes={['', 'rounded-3xl', '']} alts={['server', 'computer case', 'printer']} dim3={[200, 200]} delay={3000} />
@@ -154,7 +154,7 @@ export default function Home() {
             </figure>
             <figure className='service-card opacity-0'>
               <div className='service-card-text'>
-                <style>{`svg path {stroke: rgb(220 38 38)}`}</style>
+                <style>{`svg path {stroke: rgb(248 113 113)}`}</style>
                 <GrHostMaintenance /><figcaption>Bakım Anlaşmaları</figcaption>
               </div>
               <Swipe imgs={['img7.jpg', 'img8.png', 'img9.jpg']} classes={['rounded-3xl', '', 'rounded-3xl']} alts={['shaking hands', 'shaking hands', 'shaking hands']} dim2={[200, 200]} delay={3500} />
