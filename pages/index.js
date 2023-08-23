@@ -170,6 +170,13 @@ export default function Home() {
           </div>
         </section>
 
+        <section id='choose'>
+          <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
+            <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
+            <p className='text-xl leading-8 text-red-100'><span className='text-white text-2xl font-semibold'>Bilgi Bilişim Bilgisayar</span> olarak 24 yıllık deneyimimizle ağ ve güvenlik sistemleri, bilgisayar donanımı ve elektrik altyapı çözümleri konularında müşterilerimize en iyi hizmeti sunmaktayız. Uzman kadromuz ve son teknoloji ürünleri ile işletmenizin bilişim, güvenlik sistemleri ve elektrik altyapısı ihtiyaçlarına etkin çözümler üretiyoruz. Kurumsal firma ve kamu kurumlarının güvenilir teknoloji ve elektrik altyapısı ortağı olma vizyonumuzla faaliyetlerimizi sürdürüyor, müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz. Uzun yıllara dayanan bilgi birikimi ve deneyimimizle bilişim, güvenlik sistemleri ve elektrik altyapısı konularında siz değerli müşterilerimize en iyi hizmeti sunmaya devam edeceğiz.</p>
+          </div>
+        </section>
+
         <section id='franchises'>
           <div className='w-10/12 mx-auto px-10 py-10 mt-10 bg-gray-100 border-red-400 border-4 rounded-3xl'>
             <h2 className='mb-5 text-center text-3xl font-semibold text-red-600'>Bayiliklerimiz</h2>
@@ -178,13 +185,6 @@ export default function Home() {
                 <img className="fran-item" src={`/logos/logo${index + 1}.png`} alt={`${franchise} logo`} key={crypto.randomUUID()} />
               )}
             </div>
-          </div>
-        </section>
-
-        <section id='choose'>
-          <div className='lg:w-3/4 w-11/12 mx-auto px-10 py-10 mt-10 bg-red-500 rounded-3xl'>
-            <h2 className='mb-5 text-center text-4xl font-semibold text-red-100 underline underline-offset-4'>Neden bizi seçmelisiniz?</h2>
-            <p className='text-xl leading-8 text-red-100'><span className='text-white text-2xl font-semibold'>Bilgi Bilişim Bilgisayar</span> olarak 24 yıllık deneyimimizle ağ ve güvenlik sistemleri, bilgisayar donanımı ve elektrik altyapı çözümleri konularında müşterilerimize en iyi hizmeti sunmaktayız. Uzman kadromuz ve son teknoloji ürünleri ile işletmenizin bilişim, güvenlik sistemleri ve elektrik altyapısı ihtiyaçlarına etkin çözümler üretiyoruz. Kurumsal firma ve kamu kurumlarının güvenilir teknoloji ve elektrik altyapısı ortağı olma vizyonumuzla faaliyetlerimizi sürdürüyor, müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz. Uzun yıllara dayanan bilgi birikimi ve deneyimimizle bilişim, güvenlik sistemleri ve elektrik altyapısı konularında siz değerli müşterilerimize en iyi hizmeti sunmaya devam edeceğiz.</p>
           </div>
         </section>
       </main>
